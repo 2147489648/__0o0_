@@ -11,7 +11,7 @@ intents.typing = False
 intents.presences = False
 intents.members = True
 
-bot = commands.Bot(command_prefix= '[', intents=intents)
+bot = commands.Bot(command_prefix= '[', intents=intents, owner_id=633082846138990614)
 
 @bot.event
 async def on_ready():

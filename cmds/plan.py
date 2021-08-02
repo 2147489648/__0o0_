@@ -13,10 +13,11 @@ class Plan(Cog_Extension):
         await ctx.send(jdata['REVISE'])
  
     @commands.command()
-    async def score(self, ctx, score:int, value:int):
-        global_.score = score + value
-        await ctx.channel.purge(limit=1)
-        await ctx.send('Your score is {} now!'.format(global_.score))
+    async def score(self, ctx, value:int):
+        if ctx.author.id == 633082846138990614:
+            global_.score += value
+            await ctx.channel.purge(limit=1)
+            await ctx.send('Your score is {} now!'.format(global_.score))
 
 
 
